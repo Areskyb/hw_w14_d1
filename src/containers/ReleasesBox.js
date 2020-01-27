@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import MovieList from '../components/MovieList';
 
 class ReleaseBox extends Component{
+   
     constructor(props) {
         super(props);
         this.state = {
@@ -33,11 +35,14 @@ class ReleaseBox extends Component{
         }
         
     }
-    
 
     render(){
         return(
-            <h1>hwy</h1>
+            <>
+            <h1>Movie List</h1>
+            <MovieList data={this.state.data}></MovieList>
+            <a href={"https://www.imdb.com/title/tt3513498/?ref_=rlm"}>View Upcoming movies</a>
+            </>
         );
     }
 }

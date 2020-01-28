@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MovieList from '../components/MovieList';
-
+import '../App.css'
 class ReleaseBox extends Component{
    
     constructor(props) {
@@ -38,11 +38,11 @@ class ReleaseBox extends Component{
 
     render(){
         return(
-            <>
-            <h1>Movie List</h1>
+            <div className = "release-box">
+            <h1 className="movie-list-title">Movie List</h1>
             <MovieList data={this.state.data}></MovieList>
-            <a href={"https://www.imdb.com/title/tt3513498/?ref_=rlm"}>View Upcoming movies</a>
-            </>
+            <a href={"https://www.imdb.com/calendar/?region=gb"}>View Upcoming movies</a>
+            </div>
         );
     }
 }
